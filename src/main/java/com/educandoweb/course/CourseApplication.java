@@ -1,3 +1,8 @@
+/*
+ * Path: /course
+ * Type: Projetct
+ * Location: D:\JavaSTSProjetosSpringBasico\course
+ */
 package com.educandoweb.course;
 
 import org.springframework.boot.SpringApplication;
