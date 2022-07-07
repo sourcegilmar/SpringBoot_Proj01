@@ -3,12 +3,23 @@ package com.educandoweb.course.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /*
  * Serializable is important when we have to transform our datas in bytes chain
  * Because the object (in this case) will pass through the net or it'll transform in
  * a field of database and so forth.
  */
 
+/*
+ * Insert @Id and ..
+ * Import Entity from javax persistence
+ */
+
+@Entity
 public class User implements Serializable {
 	
 	/*
@@ -19,6 +30,13 @@ public class User implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	// The same way you have to choose javax persistence to
+	// @Id notation as well.
+	// @GeneratedValue annotation implement auto increment numbers in
+	// primary key when some insertion operation
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private Long id;
 	private String name;
 	private String email;
